@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Hotelzimmer-Buchungssystem</title>
-
+	<meta charset="UTF-8">
+	<title>Hotelzimmer-Buchungssystem</title>
 </head>
 <body>
 
 <h1>Hotelzimmer-Buchungssystem</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+	<fieldset>
+		<legend>Zimmertyp (Mehrfachauswahl)</legend>
+		<label>
+			<select name="zimmertyp[]" size="7" multiple>
+				<option selected>Einzelzimmer</option>
+				<option>Doppelzimmer</option>
+				<option>Dreibettzimmer</option>
+				<option>Vierbettzimmer</option>
+				<option>Familienzimmer</option>
+				<option>Suite</option>
+				<option>Junior Suite</option>
+			</select>
+		</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Zusatzleistungen</legend>
+		<input type="checkbox" name="zusatzleistungen[]" value="fruehstueck" id="check1">
+		<label for="check1">Frühstück</label><br>
+		<input type="checkbox" name="zusatzleistungen[]" value="parkplatz" id="check2">
+		<label for="check2">Parkplatz</label><br>
+		<input type="checkbox" name="zusatzleistungen[]" value="spa" id="check3">
+		<label for="check3">Spa</label><br>
+		<input type="checkbox" name="zusatzleistungen[]" value="fitness" id="check4">
+		<label for="check4">Fitnesscenter</label><br>
+		<input type="checkbox" name="zusatzleistungen[]" value="haushalt" id="check5">
+		<label for="check5">Tägliche Haushaltsführung</label><br>
+		<input type="checkbox" name="zusatzleistungen[]" value="wifi" id="check6">
+		<label for="check6">Kostenloses WLAN</label><br>
+	</fieldset>
+	<br>
+	<button type="submit">Absenden</button>
+</form>
 
 </body>
 </html>
